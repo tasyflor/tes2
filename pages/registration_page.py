@@ -19,9 +19,6 @@ class RegistrationPage(SeleniumBase):
     def get_submit_button(self):
         return self.is_present('xpath', self.__xpath_submit, 'Submit button')
 
-
-
-
     def get_error_message(self):
         return self.is_present('xpath', self.__xpath_error, 'Error message')
 

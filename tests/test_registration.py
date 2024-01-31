@@ -43,7 +43,7 @@ class TestRegistration:
         home_page = MainPage(self.driver)
         registration_page = RegistrationPage(self.driver)
 
-        name = 'Lorem Ipsum'
+        name = 'correct@email.ru'
         password = ''
 
         home_page.get_signup_button().click()
@@ -52,7 +52,7 @@ class TestRegistration:
         registration_page.get_submit_button().click()
         button_visible = registration_page.get_submit_button().is_displayed()
 
-        # If submit button presented, test passed, cause we still placed at registration page
+        # If submit button presented, test passed, because we still placed at registration page
         assert button_visible == True
 
     def test_successful_registration(self):
